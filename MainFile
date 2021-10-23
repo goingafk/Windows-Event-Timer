@@ -1,0 +1,36 @@
+#include <windows.h>
+#include <iostream>
+using namespace std;
+int number;
+int seconds;
+int minutes;
+int choice;
+int main() {
+    //picking the time
+    cout << "Please enter the amount of minutes you want the computer to procede the events" << endl;
+    cin >> number;
+    //calculations
+    seconds = number * 1000;
+    cout << seconds << endl;
+    minutes = seconds * 60;
+    //Choosing what to do with the system
+    cout << "What do you want to do?" << endl << "1: Shutdown" << endl << "2: Restart" << endl << "3: Logoff" << endl;
+    cin >> choice;
+    if (choice == 1) {
+        Sleep(minutes);
+        system("c:\\windows\\system32\\shutdown /s");
+    }
+    else if (choice == 2) {
+        Sleep(minutes);
+        system("c:\\windows\\system32\\shutdown /r");
+    }
+    else if (choice == 3) {
+        Sleep(minutes);
+        system("c:\\windows\\system32\\shutdown /l");
+    }
+    else if (choice == 4) {
+        Sleep(minutes);
+        cout << "Testing 1 2 3, lol" << endl;
+    }
+    return 0;
+}
